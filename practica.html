@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="esp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>ejercitacion</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+    <!--link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--Archivos de javascript externos al html-->
+
+    <!--script src="js/main.js"></script-->
+
+    <script type="text/javascript">
+        /*
+            El codigo se basa en un catalogo de productos , lo primero que pide es el nombre del cliente,
+             para luego darle la bienvenida, luego va mostrar el catalogo, una ves visto el catalogo va a la opcion de compra, que tambien tiene la oportunidad
+             de pedir mas de el catalogo con el resultado de la plata que va a gastar
+         */
+
+        function probarCodigo() {
+            let cliente;
+
+            let bienvenida;
+
+            let opciones;
+
+            let compra;
+
+            let menu;
+
+            let cable = 1500, madera = 1100, ladrillos = 1300, chapa = 1000, pintura = 1100,
+
+                tornillos = 1100, casco = 1500, pala = 1300, pico = 1600;
+
+            let cantidad;
+
+            let total;
+
+            cliente = prompt("Hola por favor ingrese su nombre");
+
+            bienvenida = cliente + "!!! bienvenido a nuestro local de insumos para la construccion ";
+
+            console.log(bienvenida);
+
+            opciones = parseInt(prompt("Ahora podras ver nuestro catalogo\n1-cable\n2-madera\n3-ladrillos\n4. Salir"));
+
+            while (opciones != "4") {
+                switch (opciones) {
+                    case 1:
+                        console.log(`1. cable ${cable}\n2. madera ${madera}\n3. ladrillos ${ladrillos}`);
+                        break;
+
+                    case 2:
+                        console.log("1. tornillos $1100\n2. casco $1500\n3. pintura $1100");
+
+                        break;
+
+                    case 3:
+                        console.log("1. pala $1300\n2. pico $ 1100\n3. madera $1100");
+                        break;
+                        
+                    case 4:
+                        console.log("Salir");
+                        break;
+
+                    default:
+                        console.log("Ingrese por favor un numero de la lista");
+                }
+                opciones = parseInt(prompt("1-cable\n2-madera\n3-ladrillos\n4-Salir"));
+            }
+
+            opciones = parseInt(prompt("Ahora podras ver nuestro catalogo\n1-cable\n2-madera\n3-ladrillos\n4. Salir"));
+
+
+            while (opciones != "4") {
+                switch (opciones) {
+                    case 1:
+                        menu = parseInt(prompt("1. Cable $1500\n2. Madera $1100\n3. chapa $1300"));
+
+                        if (menu == "1") {
+                            cantidad = parseInt(prompt("ingrese numero de pociones"));
+                            total = "El precio total es $ " + cantidad * cable;
+                            alert(total);
+                        }
+
+                        else if (menu == "2") {
+                            cantidad = parseInt(prompt("ingrese numero de pociones"));
+                            total = "El precio total es $ " + cantidad * madera;
+                            alert(total);
+                        }
+
+                        else if (menu == "3") {
+                            cantidad = parseInt(prompt("ingrese numero de pociones"));
+                            total = "El precio total es $ " + cantidad * pala;
+                            alert(total);
+                        }
+
+                        else {
+                            opciones = parseInt(prompt("Ahora podras ver nuestro catalogo\n1-cable\n2-madera\n3-ladrillos\n4. Salir"));
+                        }
+
+                        break;
+                    
+                    }
+                }
+                // ejercicio de practica: ingresar 6 veces el peso y el nombre de los alumnos  e informar en consola los datos ingresados por cada uno
+                        console.log("ejemplo con concatenación  ==>");
+                           for(let i=0; i < 6; i++)
+                         {
+                             let nombreIngresado=prompt("ingrese su nombre");
+                          let pesoIngresado=prompt("ingrese su peso");
+                          console.log("El turno es :"+i+" Nombre: "+ nombreIngresado +"y su peso es: "+ pesoIngresado);
+                        }
+                    
+
+                         //eercicio con el do while
+                     do{
+                         let clave=prompt("ingrese fecha de cumpleaños")
+         
+                     }while( clave!= "32")
+                             console.log("felicitaciones ingreso la fecha correcta");
+                    
+    
+            }
+
+    </script>
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+
+    <main class="form-signin w-100 m-auto">
+        <form>
+            <img class="mb-4"
+                src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/339977/339977-1631534697795-31f11e299a096.jpg"
+                alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">ejercitacion</h1>
+
+
+            <button type="button" onclick="probarCodigo()" class="btn btn-primary">Probar codigo</button>
+
+            <p class="mt-5 mb-3 text-muted">&copy; lucas nico</p>
+        </form>
+    </main>
+</body>
+</html>
