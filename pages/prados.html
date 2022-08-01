@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Clase 04 Coder House</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+    
+
+    
+
+<!--link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!--Archivos de javascript externos al html-->
+  
+  <script src="funciones.js"></script>
+  <script src="funcionesAnonimas.js"></script>
+  
+  <script type="text/javascript">
+    // en esta seccion tenemos codigo JS envebido en el HTML
+   // alert("bienvenidos del el HTML");
+   // Octavio Villegas
+   function probarCodigo()
+    {
+      for (let i = 0; i < 0; i++) 
+      {
+        solicitarNombre();
+      }
+      conParametros("Hola", "Coder");
+
+      let mensaje = "Bienvenidos a";
+      let coder = "Coderhouse";      
+      conParametros(mensaje,coder);
+
+
+      sumar(6, 3);            
+      mostrar(resultado); 
+
+      let numeroUno;
+      /*
+      numeroUno=prompt("ingrese numero");
+      numeroUno=parseInt(numeroUno);
+      */
+      numeroUno=pedirYRetornarEnteroMensaje("ingrese primer numero");
+      let numeroDos=pedirYRetornarEnteroMensaje("ingrese segundo numero");
+      //let numeroDos=parseInt(prompt("ingrese numero"));
+      let resultadoSuma=sumarRetornar(numeroUno,numeroDos);
+      
+      resultadoSuma=sumarRetornar(6,8);
+      mostrar(resultadoSuma);
+
+
+      console.log(calculadora(10, 5, "*"));
+      console.log(calculadora(10, 5, "+"));
+
+    }
+
+
+
+
+    function probarFuncionesAnonimas()
+    {
+      console.log( sumaAnonima(15,20) )
+      console.log( restaAnonima(15,5) )
+      console.log( sumaFlecha(15,20) )
+      console.log( restaFlecha(20,5) )
+
+      let precioProducto;
+      let descuento;
+      let precioConIva; 
+      let importeIva;
+
+      precioProducto  = 500;
+      descuento = 50 ;
+      //Calculo el precioProducto + IVA - descuento
+      importeIva=calcularIva(precioProducto);
+      precioConIva=sumaFlechaSinCuerpo(precioProducto,importeIva);
+      precioFinal=restaFlechaSinCuerpo(precioConIva,descuento);
+      console.log("precio final : "+precioFinal);
+
+      let nuevoPrecio = restaFlechaSinCuerpo(sumaFlechaSinCuerpo(precioProducto, calcularIva(precioProducto)), descuento); 
+
+      console.log("variable nuevoPrecio : "+nuevoPrecio)
+
+    }
+
+  
+  </script>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin w-100 m-auto">
+  <form>
+    <img class="mb-4" src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/339977/339977-1631534697795-31f11e299a096.jpg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">IF + WHILE JS</h1>
+
+   
+   <button type="button" onclick="probarCodigo()"  class="btn btn-primary">Testear codigo</button>
+   <br>
+    <br>
+     <br>
+    <button type="button" onclick="probarFuncionesAnonimas()"  class="btn btn-primary">Testear Funciones anonimas</button>
+
+    <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+  </form>
+</main>
+
+
+    
+  </body>
+ 
+
+</html>

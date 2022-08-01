@@ -1,0 +1,13 @@
+ /* reset*/
+  
+       
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+
+body{
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
