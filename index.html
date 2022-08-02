@@ -19,66 +19,22 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
+  <!--link de mi archivo main.js-->
+  <script src="js/main.js"></script>
  <!-- La idea es crear un simulador de compras para ropa -->
  
 
   <script type="text/javascript">
     
      alert("Bienvenidos a Moda NR");
-    function probarCodigo() {
-            let cliente;
 
-            let bienvenida;
-
-            let opciones;
-
-            let compra;
-
-            let menu;
-
-            let buzo = 1500, campera = 1100, pantalones = 1300, remeras = 1000, camisas = 1100;
-
-            let cantidad;
-
-            let total;
-
-            cliente = prompt("Hola por favor ingrese su nombre");
-
-            bienvenida = cliente + "!!! bienvenido a Moda NR ";
-
-            console.log(bienvenida);
-
-            opciones = parseInt(prompt("Ahora podras ver nuestro catalogo\n1-buzo\n2-campera\n3-pantalones\n4. Salir"));
+     solicitarNombre();
+     solicitarEmail();
+     ropaTemporada();
+     
+     probarCodigo();
 
     
-    while (opciones != "4") {
-                switch (opciones) {
-                    case 1:
-                        console.log(`buzo ${buzo}`);
-                        break;
-
-                    case 2:
-                        console.log(`camisas ${camisas}`);
-                        break;
-
-                    case 3:
-                        console.log(`pantalones ${pantalones}`);
-                        break;
-                        
-                    case 4:
-                        console.log("Salir");
-                        break;
-
-                    default:
-                        console.log("Ingrese por favor un numero de la lista");
-                }
-                opciones = parseInt(prompt("1-pantalones\n2-campera\n3-buzo\n4-Salir"));
-            }
-
-          }
-
-
-
 
    
   </script>
@@ -101,7 +57,7 @@
   </form>
 </main>
 
-<script src="js/main.js"></script>
+
  </body>
  
 
