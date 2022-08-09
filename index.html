@@ -30,9 +30,25 @@
 
      solicitarNombre();
      solicitarEmail();
-     ropaTemporada();
-     
-     probarCodigo();
+     //ropaTemporada();
+     //probarCodigo(); 
+
+
+     const objeto1 = { id: 1, producto: "buzo" };
+        const array   = [objeto1, { id: 2, producto: "campera" }];
+        array.push({ id: 3, producto: "Pantalon" });
+
+        const productos = [{ id: 1, producto: "buzo" },
+                  { id: 2,  producto: "campera" },
+                  { id: 3,  producto: "Pantalon" }];
+
+        for (const producto of productos) {
+            console.log(producto.id);
+            console.log(producto.producto);
+        }
+
+        CrearListado();
+
 
     
 
